@@ -1,0 +1,146 @@
+Trying:
+    print_square = __import__("4-print_square").print_square
+Expecting nothing
+ok
+Trying:
+    print_square(2)
+Expecting:
+    ##
+    ##
+ok
+Trying:
+    print_square(0)
+Expecting nothing
+ok
+Trying:
+    print_square(4)
+Expecting:
+    ####
+    ####
+    ####
+    ####
+ok
+Trying:
+    print_square(10)
+Expecting:
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+ok
+Trying:
+    print_square()
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+ok
+Trying:
+    print_square("666")
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square(445, 334, 5445)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 3 were given
+ok
+Trying:
+    print_square(None)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square(999.0)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square(-999.0)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square(-999)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+ok
+Trying:
+    print_square(2e8400)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square("square")
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square((44, 22))
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square([22, 22])
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square({21, 31})
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square({1:"Blue", 2:"Door"})
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square(True)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+Trying:
+    print_square(False)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+ok
+1 items passed all tests:
+  20 tests in 4-print_square.txt
+20 tests in 1 items.
+20 passed and 0 failed.
+Test passed.
