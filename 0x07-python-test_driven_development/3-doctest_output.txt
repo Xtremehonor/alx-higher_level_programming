@@ -1,0 +1,35 @@
+Trying:
+    say_my_name = __import__("3-say_my_name").say_my_name
+Expecting nothing
+ok
+Trying:
+    matrix = [[1, 2, 3], [4, 5, 6]]
+Expecting nothing
+ok
+Trying:
+    say_my_name("John", "Smith")
+Expecting:
+    My name is John Smith
+ok
+Trying:
+    say_my_name("Walter", "White")
+Expecting:
+    My name is Walter White
+ok
+Trying:
+    say_my_name("Bob")
+Expecting:
+    My name is Bob 
+ok
+Trying:
+    say_my_name(12, "White")
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+ok
+1 items passed all tests:
+   6 tests in 3-say_my_name.txt
+6 tests in 1 items.
+6 passed and 0 failed.
+Test passed.
