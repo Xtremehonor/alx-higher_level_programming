@@ -6,7 +6,7 @@ This modules finds all solutions for N queens problem
 """
 
 
-class NQueensSolver:
+class queen:
     """
     Class to solve the N-Queens problem.
     """
@@ -93,6 +93,5 @@ if __name__ == "__main__":
         print("N must be at least 4")
         sys.exit(1)
 
-    solver = NQueensSolver(N)
+    solver = queen(N)
     solver.solve()
-    
