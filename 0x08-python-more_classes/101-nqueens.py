@@ -2,7 +2,7 @@
 from sys import argv
 
 """
-This modules finds all solutions for N queens problem
+This modules finds all solutions for N queens  problem
 """
 
 
