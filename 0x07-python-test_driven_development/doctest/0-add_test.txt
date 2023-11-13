@@ -1,0 +1,114 @@
+Trying:
+    add_integer = __import__('0-add_integer').add_integer
+Expecting nothing
+ok
+Trying:
+    add_integer(2, 2)
+Expecting:
+    4
+ok
+Trying:
+    add_integer(1.4, 2)
+Expecting:
+    3
+ok
+Trying:
+    add_integer(2, 5.0)
+Expecting:
+    7
+ok
+Trying:
+    add_integer(90, -2)
+Expecting:
+    88
+ok
+Trying:
+    add_integer(10.3, -5)
+Expecting:
+    5
+ok
+Trying:
+    add_integer(100.3, -2.9)
+Expecting:
+    98
+ok
+Trying:
+    add_integer(1)
+Expecting:
+    99
+ok
+Trying:
+    add_integer("a", "b")
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+ok
+Trying:
+    add_integer(1, '999')
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+ok
+Trying:
+    add_integer(1, [20.8])
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+ok
+Trying:
+    add_integer(None, 50)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+ok
+Trying:
+    add_integer(2, None)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+ok
+Trying:
+    add_integer(777, float('NaN'))
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+ok
+Trying:
+    add_integer(666, float('inf'))
+Expecting:
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+ok
+Trying:
+    add_integer(2000202, -float('inf'))
+Expecting:
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+ok
+Trying:
+    add_integer()
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+ok
+Trying:
+    add_integer(None)
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+ok
+1 items passed all tests:
+  18 tests in 0-add_integer.txt
+18 tests in 1 items.
+18 passed and 0 failed.
+Test passed.
