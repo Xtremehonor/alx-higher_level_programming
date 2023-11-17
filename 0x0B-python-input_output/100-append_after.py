@@ -6,14 +6,14 @@ after each line containing a specific string
 
 
 def append_after(filename="", search_string="", new_string=""):
-    '''module Search and update
     '''
-    with open(filename, 'r+') as f:
-        lines = f.readlines()
-        i = 0
+    module Search and update
+    '''
+    with open(filename, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+
+    with open(filename, 'w', encoding='utf-8') as file:
         for line in lines:
-            if line.find(search_string) is not -1:
-                lines.insert(i + 1, new_string)
-            i += 1
-        f.seek(0)
-        f.write("".join(lines))
+            file.write(line)
+            if search_string in line.strip():
+                file.write(new_string)
