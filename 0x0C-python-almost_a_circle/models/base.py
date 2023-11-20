@@ -155,7 +155,7 @@ class Base:
             list_squares (list): A list of Square objects to draw.
         """
         turt = turtle.Turtle()
-        turt.screen.bgcolor("#b7312c")
+        turt.screen.bgcolor(#25a25a")
         turt.pensize(3)
         turt.shape("turtle")
 
