@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 //this prints stuff
 
 console.log('C is fun');
