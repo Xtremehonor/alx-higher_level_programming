@@ -8,7 +8,7 @@ function add (a, b) {
 }
 
 if (isNaN(a) || isNaN(b)) {
-  console.log('Nan');
+  console.log('NaN');
 } else {
   console.log(add(a, b));
 }
