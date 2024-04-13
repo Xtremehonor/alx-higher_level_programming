@@ -5,7 +5,7 @@ if (xTime > 0) {
   for (let i = 0; i < xTime; i++) {
     let output = '';
     for (let i = 0; i < xTime; i++) {
-      output += 'x';
+      output += 'X';
     }
     console.log(output);
   }
