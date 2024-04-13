@@ -1,10 +1,11 @@
 #!/usr/bin/node
 
-const xTime = process.argv[2];
+let xTime = process.argv[2];
 
 if (xTime > 0) {
-  for (i = 0; i <= xTime; i++) {
+  while (xTime > 0) {
     console.log('C is fun');
+    xTime--;
   }
 } else {
   console.log('Missing number of occurrences');
