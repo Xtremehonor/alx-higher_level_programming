@@ -4,11 +4,19 @@ module.exports = class Rectangle {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
+    } else {
+      this.width = 0; // Default values for invalid input
+      this.height = 0;
     }
   }
+
   print () {
     for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+      let row = '';
+      for (let j = 0; j < this.width; j++) {
+        row += 'x';
+      }
+      console.log(row);
     }
   }
 };
