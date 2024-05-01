@@ -13,7 +13,7 @@ db = sys.argv[3]
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host=host,user=user,passwd=password,db =db)
+    db = MySQLdb.connect(host=host, user=user, passwd=password, db =db)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM `states`")
 
