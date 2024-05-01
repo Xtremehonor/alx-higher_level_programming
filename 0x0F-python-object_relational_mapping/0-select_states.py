@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-# Lists all states from the database hbtn_0e_0_usa.
-# Usage: ./0-select_states.py <user> \
-#                             <passwd> \
-#                             <db>
+''' Lists all states from the database hbtn_0e_0_usa.
+Usage: ./0-select_states.py <user> <passwd> <db>
+'''
 import MySQLdb
 import sys
 
