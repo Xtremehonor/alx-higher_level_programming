@@ -14,3 +14,4 @@ if __name__ == "__main__":
     exists = cursor.fetchall()
     for row in exists:
         print(row)
+        
