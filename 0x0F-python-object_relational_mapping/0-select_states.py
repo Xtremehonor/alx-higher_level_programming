@@ -6,14 +6,11 @@
 import MySQLdb
 import sys
 
-host_ = 'localhost'
-user_ = sys.argv[1]
-password = sys.argv[2]
-db_ = sys.argv[3]
-
-
 if __name__ == "__main__":
-    db = MySQLdb.connect(host=host_, user=user_, passwd=password, db =db_)
+    db = MySQLdb.connect(host='localhost', 
+                         user=sys.argv[1], 
+                         passwd=sys.argv[2], 
+                         db =sys.argv[3])
     cursor = db.cursor()
     cursor.execute("SELECT * FROM `states`")
 
