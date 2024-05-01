@@ -12,8 +12,10 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM `states`")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     exists = cursor.fetchall()
     for row in exists:
         print(row)
+    cursor.close()
+    db.close()
