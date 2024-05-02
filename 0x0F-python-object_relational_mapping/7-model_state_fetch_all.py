@@ -4,6 +4,7 @@ What this script does
 """
 from sqlalchemy import create_engine
 from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
 import sys
 
 
@@ -16,11 +17,11 @@ if __name__ == "__main__":
         engine = create_engine(f"mysql://{usr}:{pss}@localhost:3306/{db}")
 
         # Create a connection
-        connection = engine.connect()
-
-        result = engine.execute("SELECT * FROM states")
-        for row in result:
-            print(row)
+        Base.metadata.create_all(engine)
+        Session = sessionmaker(bind=engine)
+        session = Session()
+        for instance in session.query(State).order_by(State.id):
+            print(instance.id, instance.name, sep=": ")
 
     except Exception as e:
         print("An error occurred:", e)
