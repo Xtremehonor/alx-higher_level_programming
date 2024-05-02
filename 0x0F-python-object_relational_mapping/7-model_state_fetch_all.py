@@ -18,6 +18,10 @@ if __name__ == "__main__":
         # Create a connection
         connection = engine.connect()
 
+        result = engine.execute("SELECT * FROM states")
+        for row in result:
+            print(row)
+
     except Exception as e:
         print("An error occurred:", e)
 
