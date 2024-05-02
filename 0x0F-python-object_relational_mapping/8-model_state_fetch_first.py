@@ -22,11 +22,11 @@ if __name__ == "__main__":
         session = Session()
 
         # Query and print the first state
-        first_state = session.query(State).order_by(State.id).first()
+        first_state = session.query(State).first()
         if first_state:
-            print(f"{first_state.id}: {first_state.name}")
+            print(first_state.id, first_state.name, sep=": ")
         else:
-            print("")
+            print("Nothing")
 
     except Exception as e:
         print("An error occurred:", e)
