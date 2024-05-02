@@ -28,5 +28,5 @@ if __name__ == "__main__":
 
     finally:
         # Close the connection
-        if connection:
-            connection.close()
+        if session:
+            session.close()
