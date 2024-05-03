@@ -16,6 +16,6 @@ if __name__ == "__main__":
 
     session = Session(engine)
     update_obj = session.query(State).filter_by(id=2).first
-    update_obj.name="New Mexico"
+    update_obj.name = "New Mexico"
     session.commit()
     session.close()
