@@ -16,13 +16,10 @@ if __name__ == '__main__':
 
         Session = sessionmaker(bind=engine)
         session = Session()
-
-        state = session.query(State).filter_by(name="Louisiana").first()
         new_state = State(name="Louisiana")
-        if not state:
-            session.add(new_state)
-            session.commit()
-        print(state.id)
+        session.add(new_state)
+        session.commit()
+        print(new_state.id)
 
     except Exception as e:
         print("An error occured", e)
